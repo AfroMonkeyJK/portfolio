@@ -1,0 +1,30 @@
+using UnityEngine;
+using System.Collections;
+
+public class ScrPulpi : MonoBehaviour {
+
+	// Velocidad del elemento
+	public float velX=5;
+	// en que direccion lo movemos
+	public Vector2 direccion = new Vector2(-1, 0);
+	// Vector de movimiento
+	Vector2 movimiento;
+	// Para acceder al rigid body
+	Rigidbody2D rb;
+
+	void Start()
+	{
+		rb = GetComponent<Rigidbody2D>();
+	}
+	void Update()
+	{
+		movimiento.x = direccion.x * velX; 
+		movimiento.y =  direccion.y;
+	}
+	
+	void FixedUpdate()
+	{
+		rb.velocity = movimiento;
+	}
+
+}

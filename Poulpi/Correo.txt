@@ -1,0 +1,27 @@
+He puesto colisiones y Triger en el Player. Daño de muerte al impactar.
+
+Balances
+
+Cadencia cambiada, quito multiple click y le doy valor de 0.325 para que dispare mas realista.
+Vida del Player cambiada a 3.
+Velocitat Player cambiada a 7.
+
+Velocitat Poulpi cambiada a -3.5.
+Velocidad proyectil Poulpi cambiada a -15.
+
+Numero enemigos aumentado a 11.
+
+Parallax Scrolling
+En un primer momento al aplicarlo al background directamente me dio problemas al no tener Renderer poniendolo en los elementos los solucione.
+
+Infinite Background (modo Dificil)
+
+Respawn ( modo facil)
+En el modo dificil me da error al no detectar bien la var respawneable.
+
+Implementacion Limites
+
+
+
+
+
