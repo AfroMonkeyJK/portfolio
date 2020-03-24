@@ -1,0 +1,28 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class ScrPlayer : MonoBehaviour {
+
+	public float velocidad = 5f; // velocidad de la nave
+
+	Vector2 movi = new Vector2();  	// para calcular movimiento de la nave
+	Rigidbody2D rb;					// para acceder al componente RigidBody
+
+	// Use this for initialization
+	void Start () {
+		rb = GetComponent<Rigidbody2D>(); // Damos valor a rb
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		movi.x = ETCInput.GetAxis("Horizontal") * velocidad;  // Leemos joystick
+		movi.y = ETCInput.GetAxis("Vertical") * velocidad;
+	}
+
+	void FixedUpdate ()
+	{
+		rb.velocity = movi;  // Aplicamos velocidad. Evitamos usar transform.Translate al estar usando fisicas
+
+	}
+}
